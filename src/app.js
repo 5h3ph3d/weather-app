@@ -9,7 +9,7 @@ console.log(__dirname);
 console.log(path.join(__dirname, "../public"));
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT ?? 3000;
 const weatherApi = "3830673069b6f2106e2d1929130030dd";
 const geocodeApi = "41da0e080fa975c3a297e12c85db115d";
 
