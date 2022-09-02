@@ -9,13 +9,22 @@ forecast = (api, lat, lon, callback) => {
     } else if (body.error) {
       callback("Unable to find location", undefined);
     } else {
-      const { weather_descriptions, feelslike, temperature, precip } =
-        body.current;
+      const { request, location, current } = body;
+      const {
+        weather_descriptions,
+        feelslike,
+        temperature,
+        precip,
+        humidity,
+        wind_speed,
+        uv_index,
+      } = current;
+      // console.log(body);
       callback(
         undefined,
-        `${weather_descriptions}. It is currently ${temperature} degrees out, but it feels like ${feelslike} degrees. There is ${
+        `${weather_descriptions}. It is currently ${temperature} degrees out, it feels like ${feelslike} degrees. There is ${
           parseFloat(precip) * 100
-        }% chance of rain.`
+        }% chance of rain. The humidity is ${humidity}%. Also the wind speed is ${wind_speed} knots.`
       );
     }
   });
