@@ -1,0 +1,41 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/cloudy-day.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/app.js"></script>
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <div class="main-content">
+      {{> header}}
+      <p>Use this site to get your weather.</p>
+      <form action="">
+        <div class="ui input">
+          <input type="text" placeholder="Location...">
+        </div>
+        {{!-- <input type="text" placeholder="Location"> --}}
+        <button class="ui button secondary">Search</button>
+      </form>
+      {{!-- placeholder --}}
+      {{!-- <div class="ui placeholder">
+        <div class="paragraph">
+          <div id="message-1" class="line"></div>
+        </div>
+        <div class="paragraph">
+          <div id="message-2" class="line"></div>
+        </div>
+      </div> --}}
+      {{!-- placeholder-end --}}
+      <p id="message-1"></p>
+      <p id="message-2"></p>
+
+
+    </div>
+    
+    {{> footer}}
+  </body>
+</html>
